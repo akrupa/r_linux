@@ -1,0 +1,6 @@
+
+
+
+git log --pretty=oneline -3
+
+git reflog

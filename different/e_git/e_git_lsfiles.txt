@@ -1,0 +1,6 @@
+git-ls-files - Show information about files in the index and the working tree
+
+
+
+# Show removed or moved files.
+git ls-flies -d

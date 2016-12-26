@@ -1,0 +1,31 @@
+Przebiek tworzenia kluczy.
+PuTTYgen Release 0.63
+Simon Tatham. All rights reserved
+
+Uruchamiamy
+Kilkamy guzik Generate i machamy myszk¹ na ok.
+
+--------------------------------------------- Kopjujemy treœæ z ok. public key
+------------------- treœæ
+ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAg/CQcABVRZxQRm5BqmublMv5Iuc11lfoAkRGpCLlQPh344VWQTRgUQkob9AeI2qudZwd7aTiDi6SpAcVBlFqhIsWjQKw/7K7kK5PSkM9BkCOIH9euw/KRb6vCp6n3iA2AW6sdoP0JEk/UxPhkOXw9zd85OH8ZaTS7L/F+0I4FywiYr/YjkEkp50jr0a1ARcoaAzOJ34vLS2bQaBngHxeBla76c/2ZvCWI7jtiPjNmgBXQv2FUNiaS5uMMZMA5/YWVYahU4F6hWQ49y4hygWcpKrQ3bm+4Dnr0PK5mZ6vW6AFsGQlATc/QkXuBJlxwfMp/wJKeu91RbzacXR+CeI4vQ== rsa-key-20150129
+------------------ koniec treœci 
+
+Zapisujemy pliki
+nazwa pliku z kluczem prywatnym: putty_test.ppk
+nazwa pliku z kluczem publicznym: putt_test_pub  UWAGA nie zapisuje w formie !!!!!!!!!!!!!!!!!!!!!!!!!!
+gotowej do wklejenia.
+
+---Putty
+Category:
+Preffered SSH protocol version 2
+Auth: podaæ lokazlizacje klucza
+
+
+
+
+
+
+
+
+
+

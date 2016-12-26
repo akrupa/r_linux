@@ -1,0 +1,4 @@
+
+
+# Ważny 
+compizconfig-settings-manager  <>  command from terminal ccms

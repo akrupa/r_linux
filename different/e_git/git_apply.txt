@@ -1,0 +1,20 @@
+git-apply - Apply a patch to files and/or to the index
+
+git-apply --help 
+
+git apply <name_atch>
+
+git apply --stat <file.patch>  Show you the stats about what it'll do
+
+git apply --check file.patch
+
+git am --signoff < file.patch
+
+
+git-format-patch - Prepare patches for e-mail submission
+
+
+
+-- e.g
+git diff HEAD^ > name_patch
+git-apple name_patch

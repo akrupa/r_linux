@@ -1,0 +1,55 @@
+Polecenie: id_rsa  id_rsa.pub
+Kilkamy trzy razy enter
+
+Wpliku .ssh  (je¿eli ma prawo dostêu)
+zostanie wygenrowany klucz
+
+ssh-keygen -t rsa  # TEGO polecenia u¿ywamy 
+póŸniej wpisujemy nazwê generowanego klucza
+
+
+==================================================================
+akrupa@matrix:~$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/akrupa/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/akrupa/.ssh/id_rsa.
+Your public key has been saved in /home/akrupa/.ssh/id_rsa.pub.
+The key fingerprint is:
+e0:d1:cd:96:07:dc:ec:d5:ed:07:d5:b0:f4:55:04:28 akrupa@matrix
+The key's randomart image is:
++--[ RSA 2048]----+
+|         ..o .+*O|
+|       . oEo+.oo=|
+|      o . =o...o.|
+|     . o . ..   o|
+|      . S       .|
+|                 |
+|                 |
+|                 |
+|                 |
++-----------------+
+akrupa@matrix:~$
+akrupa@matrix:~$ cd .ssh/
+akrupa@matrix:~/.ssh$ ls
+id_rsa  id_rsa.pub  known_hosts
+akrupa@matrix:~/.ssh$
+======================================================================================================
+na serwerze którym chcemy siê dostaæ jest plik  ~/.ssh/authorized_keys
+echo "" >> ~/.ssh/authorized_keys
+cat it_rsa.pub
+
+i to by by³o na tyle
+
+
+Na komputerze z którego siê ³¹cze jest generowany klucz prywatny i plubliczny
+
+Na komputerze z którego znajduje siê klucz prywatny 
+znajduje siê w katalogu  ~/.ssh/it_rsa
+
+
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDd0QaeoZybAY/8EFDwtiwIDOiP2eWoTQHq4dck7LRpjziZM8NRWrRKNyqjXDKputcxYoceKf7L3vDAokTkpKlg9gBCikirAxQ+DdTUJPdu3nf5Iiu33Sq5b4Z6sd+Cp1t5SZUtiXO/ssR3sAGaLZ+UDGUd2o+tV/OVEzkB/G/IOWAHBiQcTilvDeW45/wJ6OJZ4d+CQsRnHPfGoTmX/JdccUcZLMI1uj2f1i31cZhgpRFOpj22qGtYyHHiFcJqK46YMVizhTM0CwE/O9bWuQujOMZtbAqWa7hpgSAdm0IQdbPc+X170AMhB7brJyfK1/h+QA/mXtfhZrXkFmq7c08j mis@dwh.delfoni.local
+

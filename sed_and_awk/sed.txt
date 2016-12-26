@@ -1,0 +1,21 @@
+
+
+
+we:
+    pthread_mutex_unlock(&_moduleMessageIdLock);
+
+sed 's/\(\s*\)\(pthread_mutex_unlock(\)\(&\)\([^)]*\)\();\)/\1DM_MUTEX_LOCK_NAME(\4)\n\1\2\3\4\5  /g' dm_curluploader.c  | grep -B 1   mutex_un
+
+wy:
+    DM_MUTEX_LOCK_NAME(_moduleMessageIdLock)
+    pthread_mutex_unlock(&_moduleMessageIdLock);  
+
+
+
+sed -i 's/\(\s*\)\(pthread_mutex_unlock(\)\(&\)\([^)]*\)\();\)/\1DM_MUTEX_UNLOCK_NAME(\4)\n\1\2\3\4\5/g' name_file.c
+
+
+sed  's/\(\s*\)\(pthread_mutex_lock(\)\(&\)\([^)]*\)\();\)/(\4)\\1\2\3\4\5\n\1DM_MUTEX_LOCK_NAME/g' name_file.c
+
+
+sed  's/\(\s*\)\(pthread_mutex_lock(\)\(&\)\([^)]*\)\();\)/\1\2\3\4\5\n\1DM_MUTEX_LOCK_NAME(\4)/g'  file_name

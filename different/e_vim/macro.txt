@@ -1,0 +1,37 @@
+
+# Write  macro
+let @b='abcdef'
+
+#use macro in command mode
+@b
+## out. bcdef
+
+#use mode in reade mode
+<ctr+">b
+## out abcdef
+
+#show macro in command mode
+"<name_of_register>p
+"bp
+
+### record macro
+
+1. start in command mode 
+2. Press hey q
+3. command
+4. finish in command mode
+5. Press key q
+
+
+:e /home/${USER}/.vimrc.txt
+let @e='iabcdhhx'
+
+abcd<esc>hhx
+abcd<ESC>hhx
+
+# how to create special character as e.g. esc '^['
+# in inserd mode ctr+v and 'esc'
+
+
+
+

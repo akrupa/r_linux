@@ -1,0 +1,11 @@
+
+-----
+ cmake -H. -Bbuild
+ cmake --build build -- -j3
+
+---- analogicznie 
+mkdir build
+cd build
+cmake ../
+mkdir ../bin
+make

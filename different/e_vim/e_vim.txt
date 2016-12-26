@@ -1,0 +1,86 @@
+#zmienia to co zostalo zanaczone przez shift+v
+'<,'>s/<reg>//g
+
+# chortcut
+
+x -- remove char under the cursor
+X -- remove char previous the cursor
+
+
+
+
+
+let @b='"Vim''s quote handling is a little tricky"'
+
+ "Vim's quote handling is a little tricky"
+
+ctr +r  redo change
+
+
+
+###############################################################
+###############################################################
+###############################################################
+#### Register
+###############################################################
+
+:reg          # Show register
+:normal @q    # run command
+:normal <n>@<name of macro>  # run command n times.
+
+##### commend mode
+"kyy   Copy line to register name 'k'.
+##### inserd mode
+ctr+r <name of register> used register
+
+
+let @b='ia b b^[^,[ \e db'
+a b b\eb
+:let @e='^[I<e>^[A</e>'
+
+:help key-notation
+
+
+http://stackoverflow.com/questions/2943555/how-to-save-a-vim-macro-that-contains-escape-key-presses
+let @c='iabc<Esc>prefix'
+abc<Esc>prefix
+
+#######################################################################
+#########               Now how
+#######################################################################
+
+################################# How to remove whitespace in line?
+:g/^\s*$/d
+
+
+################################# How to negation replace in sed vi?
+:g!/^\s*$/d : Negation of comment above.
+
+#######################################################################
+#######################################################################
+#######################################################################
+#######################################################################
+
+
+
+######################################################### scrolling
+
+ctr+e -- przesuwa widok ekranu (show bottom of line)
+ctr+y -- przesuwa widok ekarnu (show up of line)
+
+zz -- move current line to the middle of the screen
+zt -- move current line to the top of the screen
+zb -- move current line to the bottom of the screen
+
+######################################################### Moving cursor
+ctrl+u -- Moves screen up 1/2 page
+ctrl+d -- Moves screen down 1/2 page
+ctrl+b -- Moves screen up one page
+ctrl+f -- Moves screen down one page
+
+L -- go to the bootom of the screen
+M -- go to the middle of the screen
+H -- go to the top of the screen
+gg -- go to the first line of the file
+G -- go to the last line of the file
+

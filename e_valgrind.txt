@@ -1,0 +1,8 @@
+
+
+sudo apt-get install massif-visualizer
+
+
+valgrind --tool=massif  xz  -k --lzma2=preset=9,dict=64KiB  ./file.txt
+massif-visualizer massif.out.5193
+

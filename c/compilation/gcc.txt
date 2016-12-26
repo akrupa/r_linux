@@ -1,0 +1,4 @@
+
+
+gcc -dumpmachine # target name machine will be execute the program
+gcc -v

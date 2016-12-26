@@ -1,0 +1,6 @@
+Pobiera plik CDRImportService.java
+scp -P 8021 krupaa@46.229.151.84:/home/cci/svn_src/projects/controller/src/com/cci/bemymobile/controller/services/CDRImportService.java .
+
+Pobieranie wszystkich  katalogu rekursywnie, bez opcji -r pobranie samych plików z katalogu
+scp -r -P 8021 krupaa@46.229.151.84:/home/cci/svn_src/projects/controller/src/com/cci/bemymobile/controller/* . 
+

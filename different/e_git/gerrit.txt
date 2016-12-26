@@ -1,0 +1,15 @@
+repo init -u <nazwa repo>
+repo start <name_branch> --all
+  --all  => wszystkie repozytora z gita
+
+
+repo status
+repo upload -t  => wysylanie
+repo sync  => odbieranie zmian
+
+
+repo branch => Show iformation about repo
+
+repo checkout <name_of_branch>  => switch between branch
+
+

@@ -1,0 +1,202 @@
+gitk -- The Git repository browser
+
+
+
+
+
+#Tworzymy nowe repozytorium
+git clone <adres do repozytorium>
+
+
+#Pokazuje nam bardzo dużo instotnych informacji
+git status
+
+
+# Tworzymy commita
+git commit -m 'komentarz komitu'
+
+# edytowanie ostatniego commita
+git commit --amend
+# Jeżeli chcemy pobrać (i złączyć dane ) oraz edytować ten sam commit
+git fetch ssh://<repo_address>  refs/changes/<zmiana>  && git cherry-pick FETCH_HEAD
+
+
+
+################################################################################
+################################################################################
+################################################################################
+# Info about log
+################################################################################
+
+#wyświetla informacjie na temat logów.
+git log
+# Ostatni commit
+git log -1
+#  ładniej wyświetla
+git log --graph --decorate
+
+
+# Informacje na temat commit
+ git ls-remote
+
+################################################################################
+################################################################################
+# HEAD
+################################################################################
+# Co to jest head?
+# HEAD wskazuje na commit w workspace danego brancha
+# ważne informacje na temat heada (wystarczy pierwsze osiem znaków)
+
+git show HEAD
+
+############################################################
+
+
+################################################################################
+################################################################################
+# checkout
+################################################################################
+# git-checkout - Switch branches or restore working tree files
+
+git checkout <name of branch>
+# switch between branch (your HEAD will be in <name_of_branch>)
+
+git checkout -b <new_branch>
+# Create a new branch named <new_branch> and start it at <start_point>
+#; see git-branch(1) for details.
+
+################################################################################
+################################################################################
+# git clean
+################################################################################
+git-clean - Remove untracked files from the working tree
+
+git clean -f => Remove all untracked file form repository
+git clean -nf => Show whitch files will be remove (only show information)
+################################################################################
+
+
+################################################################################
+################################################################################
+git reset
+################################################################################
+
+git reset --hard <commit>  => come back to  node  of branach
+
+git reset --soft HEAD^
+We can back to commit, and kept modifcation file.
+################################################################################
+
+
+# Show information who created the line.
+git blame nazwa_pliku
+
+#Pokazanie róznicy pomiędzy repozytoriami
+git diff <commit2>..<commit_b>
+
+
+# Dostępne opcje do tworzena branch
+git branch -h
+# create branch
+git branch <new name>
+# Nie wiem dokładnie co robi
+git branch DWN-7 HEAD
+# create and checkout a new branch
+git checkout HEAD -b <name_new_baranch>
+
+#Pobieramy i łączymt w tym samym komicie
+git pull --rebase origin master
+# musimy złączyć i stworzyć nowy komit
+git Pull orign master
+
+
+# informacja o zdalnym repozytorium (np. github pokazuje adres repozytorium, które może zostać pobrane)
+git remote -v
+# uzywamy po git init
+git remote add gerrit ssh://git<address>:<port>/<name_of_module>
+
+git push -v origin HEAD:refs/drafts/master/DMN-7
+git push  origin HEAD:refs/drafts/master/DMN-7
+git rm <name file> -- Add file to repository
+git status
+git log -1 show last commit
+git commit --amend
+
+
+
+
+git branch -- show list of branch
+git branch <name of new branch> -- create branch
+git checkout <name of branch>  -- change branch on <name of branch>
+
+use "git checkout -- <file>..." to discard changes in working directory
+
+# Łączy z danym commitem
+git rebase <name of branch e.g. master>  --
+
+
+<remote> origin
+<>
+#
+git reset --hard <commit>
+
+
+
+
+######################
+We create new repo and  download chagne (modifine as same commit)
+git fetch ssh://<address reposirory> <patch> && git cherry-pick FETCH_HEAD
+
+
+###############################################################################
+###############################################################################
+############# repo 
+###############################################################################
+repo info
+repo list
+
+################################ cherry-pick  ## TO DO
+ 30  4312  git reset --hard 664da5241c58ab27764995101288c1cdf2459632
+ 31  4313  git pull
+ 32  4314  gitk
+ 33  4315  git log -30
+ 34  4316  git reset --hard f9f1c475144d152dcfa1fc9fc70ef1d168af663e
+ 35  4317  git pull
+ 36  4318  gitk
+ 37  4319  git checkout failedmerge
+ 38  4320  git log -2
+ 39  4321  git checkout master
+ 40  4322  git cherry-pick ce0a52a4614267abb12a0dddff8e6f5681bbffbe
+ 41  4323  git status
+ 42  4324  vi lib/Makefile
+ 43  4325  git add lib/Makefile
+ 44  4326  git cherry-pick --continue
+ 45  4327  git log -2
+ 46  4328  git push gerrit HEAD:refs/for/master/DWN-18
+ 47  4329  history > and_git.txt
+
+################################## Git on the Server - Setting Up the Server
+
+
+#########################################################################################################
+#############                                    know how
+#########################################################################################################
+
+###########################  How to remove commit from history?
+git rebase -i HEAD~2
+# we will be see tow commit. Just remove name of commit from list.
+# Resovlve merge conflict if exists.
+
+
+
+######################################## How to merege between to branch
+branch master
+git merge dev --no-ff
+// --no-ff
+// i nietworzy domyślnie merge commita
+
+
+
+
+
+

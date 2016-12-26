@@ -1,0 +1,39 @@
+
+
+
+# compiler flags:
+   -g             => adds debugging information to the executable file
+   -Werror        => if warring occurs, error will be return.
+   -Wall          => turns on most, but not all, compiler warnings
+   -std=c99       => standard of compilation
+   -D_GNU_SOURCE => ?
+
+   -I .            => We must set opiton -I when we want to pass the header file.
+   -Wl,options: Pass options to linker.
+      -Wl,-rpath=<dir_to_shared_library>
+       if dont use -Wl, -rpath=<dir_to_shared_library>
+       export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH to run program
+# stage of compilation
+
+
+Obrrevation:
+    gcc - GNU C compiler
+    ld - The GNU Linker
+    ldd - List library dependencies
+    ldconfig - configure dynamic linker run time bindings (update cache /etc/ld.so.cache)
+
+
+
+http://www.tenouk.com/ModuleW.html
+1. Preprocessing is the first pass of any C compilation. It processes include-files, conditional compilation instructions and macros.
+2. Compilation is the second pass. It takes the output of the preprocessor, and the source code, and generates assembler source code.
+3.   Assembly is the third stage of compilation.
+   It takes the assembly source code and produces an assembly listing with offsets.
+   The assembler output is stored in an object file.
+4.   Linking is the final stage of compilation. 
+   It takes one or more object files or libraries as input and combines them to produce a single
+   (usually executable) file. In doing so, it resolves references to external symbols, assigns 
+   final addresses to procedures/functions and variables, and revises code and data to reflect 
+   new addresses (a process called relocation).
+
+

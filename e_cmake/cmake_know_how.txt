@@ -1,0 +1,5 @@
+
+######  How to header file?
+  FILE(GLOB_RECURSE akrupa "./interfaces/*.c")
+   add_custom_target(headers SOURCES ${akrupa})
+

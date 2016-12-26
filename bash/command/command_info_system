@@ -1,0 +1,41 @@
+
+#################
+#   To check your current kernel version, open a terminal
+# and use uname -r to display your kernel version:
+uname -r
+
+################# lscpu
+
+The lscpu command reports information about the cpu and processing units. It does not have any further options or functionality.
+
+
+sudo lshw -short
+
+
+inxi -Fx  ## ;) # najciekawsze 
+
+df
+df -H
+
+mount | column -t | grep ext
+
+lsb_release -a
+
+
+
+
+################## May be in the future will be need.
+
+free -m 
+cat /proc/version
+cat /proc/scsi/scsi
+cat /proc/partitions
+ sudo hdparm -i /dev/sda
+
+uname  => system name
+
+
+lspci
+lsscsi
+lsusb
+

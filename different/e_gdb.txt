@@ -1,0 +1,15 @@
+###########################################  bash
+
+man gdb
+info gdb
+
+
+############################################## In running gdb
+
+handle SIGINT nostop pass ---  przekazanie ctr-c do programu 
+
+focus  :  Focus on the code.
+
+bt , backtrace  : Show information about function.
+
+

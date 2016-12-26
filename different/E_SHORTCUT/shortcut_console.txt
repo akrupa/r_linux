@@ -1,0 +1,47 @@
+Mamy dwa typy slow
+SA -- oznacza slowo   {a-B,A-B,0-9} naleza do SA
+SB -- oznacza slowa  SA U { _ } naleza do SB
+
+Poczatkiem komendy jest pozycja kursora.
+--------------------------------------------------- remove
+
+------ Forward
+ctr+k  : usuwa do konca lini
+alt+d  : usuwa slowo typu SA
+ctr+d  : delete one char
+
+------ Back
+ctr+u  : usuwa od kursora do poczatku linii
+ctr+w  : usuwa slowo typu SB
+ctr+h  : backspace
+
+
+--------------------------------------------------- move
+
+------ Forward
+ctr+e  : koniec linii
+ctr+F  : do przodu jeden znak
+alt+F  : do przodu SA
+
+------ Backend
+ctr+a  : poczatek linii
+ctr+B  : do tylu jeden znak
+alt+B  : do tylu SB
+
+---------------------------------------------------- different
+esc+u : zamieñ znaki na duze litery do przodu w typie slowa SA
+
+esc+r : odswierza
+ctr+r : szukanie polecenia, wyswietla pierwsze dopasowanie
+           ponowne uzycie skrutu szuka kolejnego wystapienia
+ctr+g : wylacz ctr+r
+
+ctr+p : przegladanie history w góre
+ctr+n :
+ctr+m : enter
+
+ctrl+t : Swap the last two characters before the cursor
+esc+t : Swap the last two words before the cursor
+
+TO_DO:
+ctr+y

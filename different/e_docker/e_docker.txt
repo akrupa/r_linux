@@ -1,0 +1,61 @@
+cocker -- środowisko uruchomieniowe
+Docker dzieli jądro i zasoby
+
+
+
+
+################# Images is not the same  than containers
+
+
+sudo docker ps  -- Show running container
+sudo docker ps -a -- show running and stopped container
+
+sudo docker stop -- The container is turned off.
+
+
+################## Images build
+docker build -t <name_file> .
+
+
+commit  Create a new image from a container's changes
+
+################## create docker
+sudo docker create -t --name=c_a e5ebb291bc18
+
+################## Images build
+
+docker rm <name_container>
+docker rmi <name_image>
+
+
+#################################### search available OS
+sudo docker search ubuntu14
+
+################################### save container as image
+sudo docker commit -m "my first image" -a "akrupa" c_hello  hello_c:v1
+
+################################### create backap of images
+sudo docker save --output name_of_images_v1.tar  name_of_images:v1
+sudo docker load --input name_of_images_v1.tar
+##################################
+docker exec -it c_hello bash <=> docker-enter
+
+#####################################  execute command
+sudo docker exec c_hello  mkdir aa
+
+sudo docker exec c_hello  /bin/bash -c "ls"
+
+
+sudo ls -l /var/lib/docker/aufs/mnt/0d123b0b8615aa76403b9b27816f27ccd31f61ea1f8cf45b53b27421b063e933
+sudo ls -l /var/lib/docker/aufs/mnt/$(sudo docker inspect -f '{{.Id}}' 0d123b0b8615)
+/var/lib/docker/aufs/mnt/0d123b0b8615aa76403b9b27816f27ccd31f61ea1f8cf45b53b27421b063e933
+
+
+sudo docker run -ti  <image_name>
+
+# uruchamia bez logów
+sudo docker run -d
+sudo docker run -d <nr_image> | bash
+
+
+

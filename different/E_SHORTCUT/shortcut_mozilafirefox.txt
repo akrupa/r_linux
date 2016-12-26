@@ -1,0 +1,10 @@
+
+ctr+j -- lista pobranych plików
+ctr+t -- nowa karta
+
+ctrl+R -- Reload (override cache) 
+
+
+In Ubuntu.
+ctr+<nr> -- pokazuje odpowiednia karte
+

@@ -1,0 +1,1 @@
+make --debug=b  -f nazwa_make.mk

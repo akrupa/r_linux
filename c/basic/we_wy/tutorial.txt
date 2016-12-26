@@ -1,0 +1,13 @@
+
+
+########################################### Standard stream
+
+The three I/O  (Input/output) connections are calld:
+--- standard input    0
+--- standard output   1
+--- standard stderr   2
+
+
+########################################### Symbol break out comment line
+printf("Ten napis zajmuje \
+   więcej niż jedną linię w kodzie\n")
