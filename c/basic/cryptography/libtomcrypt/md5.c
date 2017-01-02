@@ -57,8 +57,8 @@ int main()
 
     for (int i=0; i < size_md5; ++i)
     {
-      //   printf("\n%02d :", i);
-         printf("%02x", value_md5[i]);
+         printf("\n%02d :", i);
+        // printf("%02x", value_md5[i]);
     }
     printf("\n");
 
