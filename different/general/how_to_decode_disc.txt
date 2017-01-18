@@ -1,0 +1,1 @@
+sudo ecryptfs-revover-private -rec ./encryptfs/<user_login>/.Private

@@ -1,8 +1,17 @@
 gitk -- The Git repository browser
 
 
-
-
+################# Global seting & local
+config --global user.email "your_email@example.com"
+# 
+git config --global --list
+####### Setting your email address for a single repository
+# Set your email address with the following command
+    git config user.email "your_email@example.com"
+# Confirm that you have set your email address correctly with the following command.
+    git config user.email
+# print local variable
+git config --list
 
 #Tworzymy nowe repozytorium
 git clone <adres do repozytorium>

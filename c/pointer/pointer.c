@@ -36,7 +36,7 @@ void changeConst()
      printf("TEST: %s\n\n", __FUNCTION__);
      const int a= 1;
      *((int*) &a) = 2;
-     if (2 != a) 
+     if (2 != a)
      {
          printf("BUG: Const varaible wasn't changed");
      }

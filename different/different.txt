@@ -1,0 +1,12 @@
+
+
+
+########################################## For security
+sudo apt-get install hardening-includes
+
+gcc m.c  -W -Wall -pedantic -Wextra -pie -fPIC -D_FORTIFY_SOURCE=2 -O1   -Wl,-z,now -fstack-protector-all -Wformat -Wformat-security
+ hardening-check  ./a.out
+
+Fortify Source functions -
+
+

@@ -1,0 +1,4 @@
+
+
+# basename in awk
+echo "a/a;b/b;c;d" | awk -F ';'   'BEGIN{ OFS=";" } sub(".*/", "",$1)  sub(".*/", "", $2)'

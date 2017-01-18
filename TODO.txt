@@ -1,0 +1,8 @@
+strace -f -e execve make ...
+
+strace -f make  &> a.txt
+
+
+
+
+ git ls-tree --full-tree -r HEAD|awk '{if ($2=="blob"){print $4}}'|xargs -I files grep -le '\s\+$' files

@@ -22,4 +22,4 @@ tar -zxvf Phpfiles-org.tar.gz --wildcards '*.php'
 # or directories to a existing compressed tar.gz and
 # tar.bz2 archive file.
 
-
+bzip2 -d  name.tar.bz2 => name.tar

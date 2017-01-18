@@ -8,7 +8,7 @@ sed 's/\(\s*\)\(pthread_mutex_unlock(\)\(&\)\([^)]*\)\();\)/\1DM_MUTEX_LOCK_NAME
 
 wy:
     DM_MUTEX_LOCK_NAME(_moduleMessageIdLock)
-    pthread_mutex_unlock(&_moduleMessageIdLock);  
+    pthread_mutex_unlock(&_moduleMessageIdLock);
 
 
 
@@ -19,3 +19,15 @@ sed  's/\(\s*\)\(pthread_mutex_lock(\)\(&\)\([^)]*\)\();\)/(\4)\\1\2\3\4\5\n\1DM
 
 
 sed  's/\(\s*\)\(pthread_mutex_lock(\)\(&\)\([^)]*\)\();\)/\1\2\3\4\5\n\1DM_MUTEX_LOCK_NAME(\4)/g'  file_name
+
+
+
+echo "abcd" | sed 's/\(ab\)\(cd\)/\1 \2/g'
+
+echo "ab(cd , gd" | sed 's/\(ab(\)\(cd\)/\1 \2/g'
+echo "ab(cd , gd" | sed 's/\(ab(\)\(cd\)\(.*\)/\1 \3 \2/g'
+
+echo "fun(a,b,c)" |  sed 's/\(fun(\)\(.*\),\(.*\),\(.*\))/FUNC(\2,\4,\3)/g'
+echo "output should be "FUNC(a,c,b)"
+
+

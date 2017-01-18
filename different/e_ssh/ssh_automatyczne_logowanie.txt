@@ -53,3 +53,7 @@ znajduje siê w katalogu  ~/.ssh/it_rsa
 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDd0QaeoZybAY/8EFDwtiwIDOiP2eWoTQHq4dck7LRpjziZM8NRWrRKNyqjXDKputcxYoceKf7L3vDAokTkpKlg9gBCikirAxQ+DdTUJPdu3nf5Iiu33Sq5b4Z6sd+Cp1t5SZUtiXO/ssR3sAGaLZ+UDGUd2o+tV/OVEzkB/G/IOWAHBiQcTilvDeW45/wJ6OJZ4d+CQsRnHPfGoTmX/JdccUcZLMI1uj2f1i31cZhgpRFOpj22qGtYyHHiFcJqK46YMVizhTM0CwE/O9bWuQujOMZtbAqWa7hpgSAdm0IQdbPc+X170AMhB7brJyfK1/h+QA/mXtfhZrXkFmq7c08j mis@dwh.delfoni.local
 
+
+# We need a server where we want to login
+# sudo apt-get  install openssh-server
+# reset the machine

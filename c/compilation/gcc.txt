@@ -2,3 +2,6 @@
 
 gcc -dumpmachine # target name machine will be execute the program
 gcc -v
+
+####### (macro) Ignored avoid warning message during compilation.
+#pragma GCC diagnostic ignored "-Wunused-result"

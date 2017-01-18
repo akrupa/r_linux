@@ -78,7 +78,7 @@ void two_dimensions_dynamic()
    }
 clean_two_dimensions_dynamic:
   // TO_DO clean memmory
-    return;             
+    return;
 }
 
 void two_dimensions_dynamic_one_piece()
@@ -109,10 +109,10 @@ void two_dimensions_dynamic_one_piece()
     for (i=0; i<r; ++i)
     {
         // look carefully on printed pointer  -- we don't get it this addres is belong to us.
-        printf("%02d %04ld %p %d \n", (i+1), (i+1)*sizeof(int*) , *tab+i, *(*tab+i) );
+        printf("%02d %04ld %p %d \n", i, (i)*sizeof(int) , *tab+i, *(*tab+i) );
         
     }
-    for(i=0;i<k; ++i) for(j=0; j<w;++j)  printf("%d:  %d\n" , i*k+j , tab[i][j] );
+    for(i=0;i<k; ++i) for(j=0; j<w;++j)  printf("index %02d:  value: %02d\n" , i*k+j , tab[i][j] );
  
 
     // check if we allocate one piece of memory
@@ -136,12 +136,27 @@ void examampleOfAccess()
 
 }
 
+void declareAsConst()
+{
+     char *a="ala"; // declared as string constant
+     char *b="ala";
+     //   *(a+1) = 'g'; Segmentation fault (core dumped)
+     if (a!=b)
+     {
+         printf("BUG line:%d; Pointer should be equals", __LINE__ );
+     }
+     char c[] = "ala"; // declared as a character array
+     return ;
+
+}
+
 int main()
 {
    // one_dimension();
     two_dimensions_static();
     two_dimensions_dynamic();
     two_dimensions_dynamic_one_piece();
+    declareAsConst();
     return 0;
 }
 

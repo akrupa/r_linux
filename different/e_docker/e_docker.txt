@@ -1,7 +1,14 @@
 cocker -- środowisko uruchomieniowe
 Docker dzieli jądro i zasoby
 
+################# TO_DO
+https://docs.docker.com/engine/installation/linux/linux-postinstall/
 
+
+################# Download remote image
+docker pull i386/ubuntu:14.04
+docker pull 32bit/ubuntu
+docker pull ioft/i386-ubuntu
 
 
 ################# Images is not the same  than containers
@@ -21,6 +28,8 @@ commit  Create a new image from a container's changes
 
 ################## create docker
 sudo docker create -t --name=c_a e5ebb291bc18
+# start
+sudo docker run -it -d 
 
 ################## Images build
 
@@ -57,5 +66,7 @@ sudo docker run -ti  <image_name>
 sudo docker run -d
 sudo docker run -d <nr_image> | bash
 
+####################### mount directory to docker
+ sudo docker run -v  /absoulte_path_dir_in_system/:/visible_in/ -it i2  /bin/bash
 
 
